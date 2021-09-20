@@ -1,6 +1,6 @@
 let myArray = [1,22,3,44,5,6,100,7,8,9,10,12]; 
 
-function SortArray(myArray) {
+function SortArrayV3(myArray) {
     myArray.forEach((el, i) => {
         el % 2 == 0 ? el : myArray.splice(i, 1);
     });
@@ -17,4 +17,4 @@ function SortArray(myArray) {
 }
 
 // node variant2.js in terminal
-console.log(`Массив после сортировки = ${SortArray(myArray)}`);
+console.log(`Массив после сортировки = ${SortArrayV3(myArray)}`);
