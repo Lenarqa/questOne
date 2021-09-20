@@ -5,7 +5,6 @@ function SortArrayOne(myArray) {
     myArray.forEach((el, i) => {
         el % 2 != 0 ? el : myArray.splice(i, 1);
     }); 
-    console.log(myArray);
     return myArray.sort();
 }
 
@@ -22,15 +21,15 @@ function SortArrayTwo(myArray) {
     
     let finishArray = [];
     myArray.forEach((el, i) => {
-        let minElIndex = copyMyArray.indexOf(Math.min.apply(null, copyMyArray)) 
-        let minEl = copyMyArray.splice(minElIndex, 1)[0]
+        let minElIndex = copyMyArray.indexOf(Math.min.apply(null, copyMyArray));
+        let minEl = copyMyArray.splice(minElIndex, 1)[0];
         finishArray[i] = minEl
     });
-    console.log(finishArray);
+
     return finishArray;
 }
 
 // node variant1.js in terminal
 // console.log(`SortArrayOne = ${SortArrayOne(myArray)}`);
-console.log(`SortArrayOne = ${SortArrayTwo(myArray)}`);
+console.log(`SortArrayTwo = ${SortArrayTwo(myArray)}`);
 

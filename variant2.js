@@ -1,11 +1,20 @@
-let myArray = [1,2,3,4,5,6,7,8,9]; 
+let myArray = [1,22,3,44,5,6,100,7,8,9,10,12]; 
 
-// функция с использование метода sort();
 function SortArray(myArray) {
     myArray.forEach((el, i) => {
         el % 2 == 0 ? el : myArray.splice(i, 1);
-    }); 
+    });
+
+    console.log(`Массив четных чисел = ${myArray}`);
+    
+    for (let i = 0; i < myArray.length/2; i++) {
+        let topEl = myArray[i];
+        let bottomEl = myArray[myArray.length-1-i];
+        myArray[i] = bottomEl;
+        myArray[myArray.length-1-i] = topEl;
+    }
     return myArray;
 }
 
-console.log(SortArray(myArray));
+// node variant2.js in terminal
+console.log(`Массив после сортировки = ${SortArray(myArray)}`);
